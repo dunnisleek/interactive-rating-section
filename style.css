@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+   --White: hsl(0, 0%, 100%);
+     --Light-Grey: hsl(217, 12%, 63%);
+     --MediumGrey: hsl(216, 12%, 54%);
+     --DarkBlue: hsl(213, 19%, 18%);
+     --VeryDarkBlue: hsl(216, 12%, 8%);
+     ---Orange: hsl(25, 97%, 53%)
+}
+*{
+margin: 0 auto;
+ box-sizing: border-box;
+ font-family: 'Overpass', sans-serif;
+}
+body{
+  background-color:var(--VeryDarkBlue);
+  font-family: 'Overpass', sans-serif;
+ 
+}
+.wrapper{
+ 
+  background: var(--DarkBlue);
+  margin:0 auto;
+  margin-top: 80px;
+  max-width: 400px;
+  border-radius: 20px;
+  padding:40px;
+}
+ img{
+  
+  padding: 10px;
+  border-radius: 20px;
+  background-color:var(--VeryDarkBlue)
+}
+.wrapper h2{
+  font-size: 25px;
+  color:#fff;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+.wrapper p{
+  font-size: 15px;
+  color:var(--Light-Grey);
+
+}
+
+h3{
+  display: inline-flex;
+  margin: 13px 0px;
+  
+  padding:20px;
+  border-radius: 80px;
+  background-color: var(--DarkBlue);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ color: var(--MediumGrey);
+}
+.submitBtn {
+  display: block;
+  background: var(---Orange);
+  border-radius: 20px;
+  padding: 10px;
+  color:#ffffff;
+  width:100%;
+  border:none;
+}
+
+/* thank you */
+.thankYouWrapper img{
+  background: transparent;
+}
+.thankYouWrapper {
+  position: absolute;
+  top:0;
+  left:36.1%;
+  text-align: center;
+}
+.thankYouWrapper .rating{
+    background: var( --DarkBlue);
+    padding: 10px;
+    border-radius: 30px;
+    color:var(---Orange);
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+form.select-rating {
+  display: flex;
+  gap: 14px;
+}
+.form-group {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.formbutton button{
+  display:block;
+ 
+}
+.fieldset{
+  display: flex;
+  padding: 20px 0px;
+}
+label {
+    
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    background: var(--VeryDarkBlue);
+    color:#ffffff;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  label +:hover{
+    background:var(--Light-Grey);
+    color:pink
+  }
+   input {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; 
+  opacity: 0;
+} 
+input:checked + label {
+
+  background: Orange;
+  
+}
+
+@media screen and (max-width : 500px){
+  
+  .wrapper{
+    width:350px;
+  }
+  .thankYouWrapper {
+    position: absolute;
+    top:0;
+    left:5.2%;
+    text-align: center;
+  }
+}

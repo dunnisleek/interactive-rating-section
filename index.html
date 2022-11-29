@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- Rating state start -->
+<div id="app">
+
+  <div class="wrapper">
+    <img src="images/icon-star.svg" >
+    <h2> How did we do?</h2>
+    <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p> 
+  <form class="select" @submit.prevent="submitForm">
+   <div class="fieldset">
+      <div class="form-group">
+        <input id="one" name="how" value="1" type="radio" placeholder="1" v-model="how" />
+        <label for="one">1</label>
+      </div>
+      <div class="form-group">
+        <input id="two" name="how" value="2" type="radio" v-model="how" />
+        <label for="two">2</label>
+      </div>
+      <div class="form-group">
+        <input id="three" name="how" value="3" type="radio" v-model="how" />
+        <label for="three">3</label>
+      </div>
+      <div class="form-group">
+        <input id="four" name="how" value="4" type="radio" v-model="how" />
+        <label for="four">4</label>
+      </div>
+      <div class="form-group">
+        <input id="five" name="how" value="5" type="radio" v-model="how" />
+        <label for="five">5</label>
+      </div>
+    </div>
+  
+      <br>
+     
+        <button class="submitBtn" type="submit" @click="displayPage">Submit</button>
+     
+  </form>
+  
+</div>
+
+ <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="wrapper thankYouWrapper" v-show="displayThankYou">
+    <img src="images/illustration-thank-you.svg"/>
+    <p class="rating">You selected <!-- Add rating here -->{{how}} out of 5 </p>
+    <h2> Thank you!</h2>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p> 
+  </div>
+</div>   
+
+
+  <!-- Thank you state end-->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Dunni</a>.
+  </div>  -->
+</body>
+<script src="app.js"></script>
+</html>
